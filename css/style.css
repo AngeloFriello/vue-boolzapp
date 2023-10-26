@@ -2,10 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  
+    font-family: 'Roboto Mono';
 }
 
-
+/*
+    RESET
+*/
 
 input{
     text-decoration: none;
@@ -27,6 +29,48 @@ header{
     display: flex;
 }
 
+img{
+    max-height: 100%;
+}
+
+
+/*
+    UTILITY
+*/
+.m-r-lg{
+    margin-right: 80px
+}
+
+.flex{
+    display: flex;
+}
+
+.j-b{
+    justify-content: space-between;
+}
+
+.j-c{
+    justify-content: center;
+}
+
+.a-c{
+    align-items: center;
+}
+
+.btn-search{
+    height: 100%;
+    width: 50px;
+}
+
+.input-search{
+    width: 100%;
+}
+
+.fa-ellipsis-vertical{
+   margin-right: 20px;
+   color: gray;
+}
+
 
 /*
     STYLE LATO UTENTE
@@ -44,6 +88,11 @@ header{
     height: 80px;
 }
 
+.utent-me img{
+    max-width: 60px;
+    max-height: 60px;
+}
+
 .utent-notifica{
     background-color: rgb(122, 169, 255);
     height: 80px;
@@ -54,12 +103,45 @@ header{
     background-color: lightgray;
     border: 1px solid gray;
     height: 40px;
+    padding: 5px;
 }
 
 .utent-list{
     height: 800px;
     background-color: white;
     border: 1px solid gray;
+}
+
+
+/*
+    CARD_UTENT-LIST
+*/
+
+
+.card{
+    border: 1px solid gray;
+}
+
+.card__img{
+    margin-left: 20px;
+    height: 80px;
+    aspect-ratio: 1,1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card-text{
+    margin-left: 20px;
+}
+
+.name-utent{
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.last-mex{
+    font-size: 15px;
+    color: lightgrey;
 }
 
 
@@ -90,4 +172,11 @@ header{
     height: 80px;
     background-color: rgb(244, 244, 244);
     border: 1px solid gray;
+}
+
+.writh-mex{
+    height: 60%;
+    width: 60%;
+    border-radius: 10px;
+    border: none;
 }
