@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+
+
+input{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+header{
+    background-color: green;
+    height: 200px;
+ 
+}
+
+.container{
+    width: 1200px;
+    margin: -100px auto; 
+    height: 1000px;
+    display: flex;
+}
+
+
+/*
+    STYLE LATO UTENTE
+*/
+
+
+.utent{
+    width: 30%;
+    height: 100%;
+}
+
+.utent-me{
+    background-color: lightgray;
+    border: 1px solid gray;
+    height: 80px;
+}
+
+.utent-notifica{
+    background-color: rgb(122, 169, 255);
+    height: 80px;
+    border: 1px solid gray;
+}
+
+.utent__search-bar{
+    background-color: lightgray;
+    border: 1px solid gray;
+    height: 40px;
+}
+
+.utent-list{
+    height: 800px;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+
+/*
+    STYLE LATO CHAT
+*/
+
+
+.chat{
+    width: 70%;
+    height: 100%;
+}
+
+.chat-name{
+    height: 80px;
+    background-color: lightgray;
+    border: 1px solid gray;
+}
+
+.chat-body{
+    background-image: url(../img/mine.jpg);
+    height: 840px;
+    object-fit: cover;
+    border: 1px solid gray;
+}
+
+.chat-message{
+    height: 80px;
+    background-color: rgb(244, 244, 244);
+    border: 1px solid gray;
+}
