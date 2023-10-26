@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto Mono';
+    font-family: 'Archivo', sans-serif;
 }
 
 /*
@@ -17,7 +17,7 @@ input{
 }
 
 header{
-    background-color: green;
+    background-color: rgb(40, 78, 40);
     height: 200px;
  
 }
@@ -37,9 +37,7 @@ img{
 /*
     UTILITY
 */
-.m-r-lg{
-    margin-right: 80px
-}
+
 
 .flex{
     display: flex;
@@ -71,6 +69,13 @@ img{
    color: gray;
 }
 
+.fa-bell-slash{
+    color:rgb(122, 169, 255);
+    font-size: 20px;
+    aspect-ratio: 1,1;
+    padding: 10px;
+}
+
 
 /*
     STYLE LATO UTENTE
@@ -97,6 +102,26 @@ img{
     background-color: rgb(122, 169, 255);
     height: 80px;
     border: 1px solid gray;
+}
+
+.box-bell{
+    background-color: white;
+    border-radius: 100%;
+    aspect-ratio: 1,1;
+    margin-right: 30px;
+   
+}
+
+.notifiche-top-text{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.notifiche-bottom-text{
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    text-decoration:underline;
 }
 
 .utent__search-bar{
@@ -128,10 +153,16 @@ img{
     aspect-ratio: 1,1;
     object-fit: cover;
     border-radius: 50%;
+    padding: 5px;
 }
 
 .card-text{
     margin-left: 20px;
+}
+
+.utent-me .name-utent{
+    margin-right: 170px;
+    font-size: 15px;
 }
 
 .name-utent{
@@ -160,6 +191,8 @@ img{
     background-color: lightgray;
     border: 1px solid gray;
 }
+
+
 
 .chat-body{
     background-image: url(../img/mine.jpg);
