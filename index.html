@@ -55,62 +55,14 @@
 
                     <div class="utent-list">
                         <div class="cards">
-                            <div class="card flex">
-                                <img src="./img/avatar_1.jpg" alt="" class="card__img">
+                            <div class="card flex" v-for="(contact,index) in contacts">
+                                <img :src="contacts[0].avatar" alt="" class="card__img">
                                 <div class="card-text">
-                                    <p class="name-utent">Gennaro</p>
-                                    <p class="last-mex">Mangia il cane</p>
+                                    <p class="name-utent">{{contacts[index].name}}</p>
+                                    <p class="last-mex">{{contacts[index].messages[0].message}}</p>
                                 </div>
                             </div>
-                            <div class="card flex">
-                                <img src="./img/avatar_2.jpg" alt="" class="card__img">
-                                <div class="card-text">
-                                    <p class="name-utent"></p>
-                                    <p class="last-mex"></p>
-                                </div>
-                            </div>
-                            <div class="card flex">
-                                <img src="./img/avatar_3.jpg" alt="" class="card__img">
-                                <div class="card-text">
-                                    <p class="name-utent"></p>
-                                    <p class="last-mex"></p>
-                                </div>
-                            </div>
-                            <div class="card flex">
-                                <img src="./img/avatar_4.jpg" alt="" class="card__img">
-                                <div class="card-text">
-                                    <p class="name-utent"></p>
-                                    <p class="last-mex"></p>
-                                </div>
-                            </div>
-                            <div class="card flex">
-                                <img src="./img/avatar_5.jpg" alt="" class="card__img">
-                                <div class="card-text">
-                                    <p class="name-utent"></p>
-                                    <p class="last-mex"></p>
-                                </div>
-                            </div>
-                            <div class="card flex">
-                                <img src="./img/avatar_6.jpg" alt="" class="card__img">
-                                <div class="card-text">
-                                    <p class="name-utent"></p>
-                                    <p class="last-mex"></p>
-                                </div>
-                            </div>
-                            <div class="card flex">
-                                <img src="./img/avatar_7.jpg" alt="" class="card__img">
-                                <div class="card-text">
-                                    <p class="name-utent"></p>
-                                    <p class="last-mex"></p>
-                                </div>
-                            </div>
-                            <div class="card flex">
-                                <img src="./img/avatar_8.jpg" alt="" class="card__img">
-                                <div class="card-text">
-                                    <p class="name-utent"></p>
-                                    <p class="last-mex"></p>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
