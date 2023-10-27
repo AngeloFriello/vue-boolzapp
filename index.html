@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     <div class="chat-message flex a-c j-c">
-                        <input type="text" class="writh-mex" placeholder=" scrivi messaggio">
+                        <input type="text" class="writh-mex" placeholder=" scrivi messaggio" v-model.trim="inputNewMessagge" @keyup.enter="addMessage(currentIndex)">
                     </div>
                 </div>
             </div>
