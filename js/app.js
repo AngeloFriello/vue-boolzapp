@@ -172,13 +172,6 @@ createApp({
     methods:{
         
         toggleImage(index) {
-            // if (this.contacts[index].visible === true) {
-            //     this.contacts[index].visible = false;
-            //     console.log('questo e true' + index)
-            // } else if(this.contacts[index].visible === false){
-            //     this.contacts[index].visible = true;
-            //     console.log('questo e false' + index)
-            // }
            this.currentIndex = index
            console.log(index)
         },

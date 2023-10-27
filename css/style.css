@@ -39,6 +39,10 @@ img{
 */
 
 
+.bg-gray{
+    background-color: gray;
+}
+
 .block{
     display: block;
 }
@@ -93,6 +97,7 @@ img{
     padding: 10px;
     border-radius: 8px;
     align-self: flex-start;
+    margin: 10px;
 }
 
 .messages-sent{
@@ -100,16 +105,16 @@ img{
     padding: 10px;
     border-radius: 8px;
     align-self: flex-end;
-    
+    margin: 10px;
 }
 
 .chat-row{
     margin: 20px;
-   
+   flex-direction: column;
 }
 
 .active{
-    display: flex;
+
 }
 
 
