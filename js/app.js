@@ -4,7 +4,6 @@ createApp({
     data(){
         return{
             inputNewMessagge: '',
-           
             currentIndex: 0,
             contacts: [
                 {
@@ -172,7 +171,22 @@ createApp({
         }
     },
     methods:{
-        
+        count(currentIndex){
+
+            if(this.counter > 1 ){
+                console.log(this.counter++)
+                clearInterval(this.countInterval)
+            }else{
+                newMessage =
+                {
+                    date: '10/01/2020 15:30:55',
+                    message: 'OK!',
+                    status: 'received'
+                },
+            newMessagge = this.contacts[currentIndex].messages.push(newMessage)
+            }
+        },
+
         toggleImage(index) {
            this.currentIndex = index
            console.log(index)
@@ -185,6 +199,16 @@ createApp({
                 status: 'sent'
             },
             newMessagge = this.contacts[currentIndex].messages.push(newMessage)
+            setTimeout(() => {
+                newMessage =
+                {
+                    date: '10/01/2020 15:30:55',
+                    message: 'OK!',
+                    status: 'received'
+                },
+                newMessagge = this.contacts[currentIndex].messages.push(newMessage)
+            },1000)
+             
         }
     },
     mounted(){
