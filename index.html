@@ -55,14 +55,13 @@
 
                     <div class="utent-list">
                         <div class="cards">
-                            <div class="card flex" v-for="(contact,index) in contacts">
-                                <img :src="contacts[0].avatar" alt="" class="card__img">
+                            <div class="card flex" v-for="(contact, index) in contacts" @click="toggleImage(index)" >
+                                <img :src="contacts[index].avatar" alt="" class="card__img">
                                 <div class="card-text">
                                     <p class="name-utent">{{contacts[index].name}}</p>
                                     <p class="last-mex">{{contacts[index].messages[0].message}}</p>
                                 </div>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
@@ -75,12 +74,10 @@
                         <p class="name-utent">Gennaro</p>
                     </div>
                     <div class="chat-body">
-                        <div class="chat-body_container">
-                            <div class="chat-row flex j-e">
-                                <p class="messages-sent"> ciao</p>
-                            </div>
-                            <div class="chat-row flex">
-                                <p class="messages-received">ciao</p>
+                        <div class="chat-body_container flex" >
+                            <div class="chat-row j-e" class="">
+                                <!-- <p :class="{messages-sent: contacts[index].messages[index].status === sent }">{{contacts[index].messages[index].message}}</p> -->
+                                <p :class="{messages-sent: messageElement.status === sent ? messages-received }" v-for="(messageElement, index) in contacts[currentIndex].messages">{{messageElement.message}}</p>
                             </div>
                         </div>
                     </div>
