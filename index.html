@@ -48,14 +48,14 @@
 
                     <div class="utent__search-bar flex">
                         <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input type="search" class=" input-search" placeholder="cerca qui i tuoi contatti">
+                        <input type="text" class=" input-search" id="ricerca" placeholder="cerca qui i tuoi contatti" v-model="value">
                     </div>
+                    
 
                     <!-- LISTA CONTATTI IN RUBRICA -->
-
                     <div class="utent-list">
                         <div class="cards">
-                            <div class="card flex" :class="currentIndex === index ? 'bg-gray' : '' "  v-for="(contact, index) in contacts" @click="toggleImage(index)" >
+                            <div class="card flex" :class="currentIndex === index ? 'bg-gray' : '' "  v-for="(contact, index) in filterName" @click="toggleImage(index)" >
                                 <img :src="contacts[index].avatar" alt="" class="card__img">
                                 <div class="card-text">
                                     <p class="name-utent">{{contacts[index].name}}</p>
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     <div class="chat-message flex a-c j-c">
-                        <input type="text" class="writh-mex" placeholder=" scrivi messaggio" v-model.trim="inputNewMessagge" @keyup.enter="addMessage(currentIndex)">
+                        <input type="text" class="writh-mex" placeholder=" scrivi messaggio" v-model.trim="inputNewMessage" @keyup.enter="addMessage(currentIndex)">
                     </div>
                 </div>
             </div>

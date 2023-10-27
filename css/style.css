@@ -9,6 +9,10 @@
     RESET
 */
 
+li{
+    list-style: none;
+}
+
 input{
     text-decoration: none;
     margin: 0;
@@ -39,6 +43,16 @@ img{
     UTILITY
 */
 
+
+.d-none{
+    display: none;
+}
+
+.hover:hover{
+    background-color: gray;
+    color: white;
+    display: block;
+}
 
 .bg-gray{
     background-color: gray;
@@ -171,6 +185,7 @@ img{
     border: 1px solid gray;
     height: 40px;
     padding: 5px;
+    position: relative;
 }
 
 .utent-list{
@@ -260,4 +275,27 @@ img{
     width: 60%;
     border-radius: 10px;
     border: none;
+}
+
+
+
+
+/*
+    RISULTATO SEARCHBAR
+*/
+
+
+.ricerca{
+
+}
+
+.risultato{
+    width: 304px;
+    min-height: 10px;
+    position: absolute;
+    top: 33px;
+    left: 50px;
+    background-color: white;
+    /* display: none; */
+    border: 1px solid gray;
 }

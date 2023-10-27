@@ -3,7 +3,8 @@ const { createApp } = Vue
 createApp({
     data(){
         return{
-            inputNewMessagge: '',
+            value: '',
+            inputNewMessage: '',
             currentIndex: 0,
             contacts: [
                 {
@@ -167,26 +168,11 @@ createApp({
                     }
                     ],
                 }
-                ]
+                ],
+            contactsFiltered: [],
         }
     },
     methods:{
-        count(currentIndex){
-
-            if(this.counter > 1 ){
-                console.log(this.counter++)
-                clearInterval(this.countInterval)
-            }else{
-                newMessage =
-                {
-                    date: '10/01/2020 15:30:55',
-                    message: 'OK!',
-                    status: 'received'
-                },
-            newMessagge = this.contacts[currentIndex].messages.push(newMessage)
-            }
-        },
-
         toggleImage(index) {
            this.currentIndex = index
            console.log(index)
@@ -195,10 +181,11 @@ createApp({
             newMessage =
             {
                 date: '10/01/2020 15:30:55',
-                message: this.inputNewMessagge,
+                message: this.inputNewMessage,
                 status: 'sent'
             },
             newMessagge = this.contacts[currentIndex].messages.push(newMessage)
+            inputNewMessage = '',
             setTimeout(() => {
                 newMessage =
                 {
@@ -208,10 +195,18 @@ createApp({
                 },
                 newMessagge = this.contacts[currentIndex].messages.push(newMessage)
             },1000)
-             
-        }
+        },
+    },
+    computed:{
+        filterName(){
+            return this.contacts.filter(ricercato =>{
+                return ricercato.name.toLowerCase().includes(this.value.toLowerCase())
+            })
+        },
     },
     mounted(){
+        this.contactsFiltered = this.contacts.filter(() => true);
         console.log('ok')
     },
+    
 }).mount('#app');
