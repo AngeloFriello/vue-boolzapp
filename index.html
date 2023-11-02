@@ -48,7 +48,7 @@
 
                     <div class="utent__search-bar flex">
                         <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input type="text" class=" input-search" id="ricerca" placeholder="cerca qui i tuoi contatti" v-model="value">
+                        <input type="text" class=" input-search" id="ricerca" placeholder="cerca qui i tuoi contatti" v-model.trim ="value">
                     </div>
                     
 
@@ -56,10 +56,10 @@
                     <div class="utent-list">
                         <div class="cards">
                             <div class="card flex" :class="currentIndex === index ? 'bg-gray' : '' "  v-for="(contact, index) in filterName" @click="toggleImage(index)" >
-                                <img :src="contacts[index].avatar" alt="" class="card__img">
+                                <img :src="contact.avatar" alt="" class="card__img">
                                 <div class="card-text">
-                                    <p class="name-utent">{{contacts[index].name}}</p>
-                                    <p class="last-mex">{{contacts[index].messages[0].message}}</p>
+                                    <p class="name-utent">{{contact.name}}</p>
+                                    <p class="last-mex">{{contact.messages[0].message}}</p>
                                 </div>
                             </div>
                         </div>
@@ -70,13 +70,23 @@
 
                 <div class="chat">
                     <div class="chat-name flex a-c">
-                        <img src="./img/avatar_1.jpg" alt="" class="card__img">
-                        <p class="name-utent">Gennaro</p>
+                        <img :src="contacts[currentIndex].avatar" alt="" class="card__img">
+                        <p class="name-utent">{{contacts[currentIndex].name}}</p>
                     </div>
                     <div class="chat-body">
                         <div class="chat-body_container flex" >
-                            <div class="chat-row flex">
-                                <p :class=" messageElement.status === 'sent' ? 'messages-sent' : 'messages-received' " v-for="(messageElement, index) in contacts[currentIndex].messages">{{messageElement.message}}</p>
+                            <div class="chat-row flex" v-for="(messageElement, index) in contacts[currentIndex].messages">
+                                <div :class=" messageElement.status === 'sent' ? 'messages-sent' : 'messages-received'" @click="toggleDisplay()">
+                                    <p>{{messageElement.message}}</p>
+                                </div>
+                                <div :class="contacts[currentIndex].visible === true ? 'd-none' : 'd-inline'">
+                                    <ul :class=" messageElement.status === 'sent' ? 'messages-sent' : 'messages-received ul' " >
+                                        <li class="hover" @click="removeMessage(messageElement, currentIndex)">Delete</li>
+                                        <li class="hover">Edit</li>
+                                        <li class="hover">Copy</li>
+                                    </ul>
+                                </div>
+                               
                             </div>
                         </div>
                     </div>

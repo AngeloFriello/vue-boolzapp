@@ -44,12 +44,17 @@ img{
 */
 
 
+.d-inline{
+    display: inline;
+}
+
 .d-none{
     display: none;
 }
 
 .hover:hover{
     background-color: gray;
+    padding: 0px;
     color: white;
     display: block;
 }
@@ -267,7 +272,7 @@ img{
 .chat-message{
     height: 80px;
     background-color: rgb(244, 244, 244);
-    border: 1px solid gray;
+
 }
 
 .writh-mex{
@@ -297,5 +302,25 @@ img{
     left: 50px;
     background-color: white;
     /* display: none; */
-    border: 1px solid gray;
+
+}
+
+
+/*
+    MENU MESSAGGIO 
+*/
+
+
+ul.messages-sent{
+    background-color: white;
+    margin-top: -20px;
+    padding: 3px;
+    margin-right: -30px;
+}
+
+ul.messages-received{
+    background-color: white;
+    margin-top: -20px;
+    padding: 3px;
+    margin-left: -30px;
 }

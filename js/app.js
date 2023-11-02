@@ -178,14 +178,14 @@ createApp({
            console.log(index)
         },
         addMessage(currentIndex){
-            newMessage =
+            let newMessage =
             {
                 date: '10/01/2020 15:30:55',
                 message: this.inputNewMessage,
                 status: 'sent'
-            },
-            newMessagge = this.contacts[currentIndex].messages.push(newMessage)
-            inputNewMessage = '',
+            };
+            this.contacts[currentIndex].messages.push(newMessage)
+            this.inputNewMessage = '',
             setTimeout(() => {
                 newMessage =
                 {
@@ -193,13 +193,20 @@ createApp({
                     message: 'OK!',
                     status: 'received'
                 },
-                newMessagge = this.contacts[currentIndex].messages.push(newMessage)
+                this.contacts[currentIndex].messages.push(newMessage)
             },1000)
+        },
+        toggleDisplay(){
+            this.contacts[this.currentIndex].visible = !(this.contacts[this.currentIndex].visible);
+        },
+        removeMessage(currentIndex){
+            this.contacts[currentIndex].messages[index].splice(this.contacts[currentIndex].messages[index],1)
         },
     },
     computed:{
         filterName(){
             return this.contacts.filter(ricercato =>{
+                console.log(this.value);
                 return ricercato.name.toLowerCase().includes(this.value.toLowerCase())
             })
         },
